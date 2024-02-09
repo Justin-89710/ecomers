@@ -1,0 +1,246 @@
+/* General styles */
+
+* {
+    font-family: 'Poppins', sans-serif !important;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+/* Search box styles */
+
+.custom_search {
+    color: #FFF !important;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 2px solid #FFF;
+    width: 240px !important;
+}
+
+.custom_search:focus {
+    box-shadow: none;
+    background: transparent;
+    border-bottom: 2px solid #FFF;
+}
+
+.custom_search + .search_span {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    left: 50%;
+    transition: width 0.5s, left 0.5s;
+}
+
+.custom_search:focus + .search_span {
+    width: 240px;
+    left: 0;
+    border-bottom: 2px solid #FF4B2B;
+}
+
+.custom_search::placeholder {
+    color: #FFF !important;
+}
+
+.search_button {
+    background: #FF4B2B;
+    width: 100px;
+    border: 0;
+}
+
+.search_button:focus {
+    border: 0;
+    box-shadow: none;
+}
+
+.search_button:active {
+    background: #FF4B2B !important;
+    box-shadow: none !important;
+}
+
+.search_button:hover {
+    background: #FF4B2B;
+}
+
+/* Ripple effect styles */
+
+.tx--white {
+    color: #fff;
+}
+
+[ripple] {
+    position: relative;
+    overflow: hidden;
+}
+
+[ripple] .ripple--container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+[ripple] .ripple--container span {
+    transform: scale(0);
+    border-radius: 100%;
+    position: absolute;
+    opacity: 0.30;
+    background-color: #fff;
+    animation: ripple 1000ms;
+}
+
+@-moz-keyframes ripple {
+    to {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+@-webkit-keyframes ripple {
+    to {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+@-o-keyframes ripple {
+    to {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+@keyframes ripple {
+    to {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+/* Navbar styles */
+
+.navbar {
+    background: #222 !important;
+    line-height: 2rem !important;
+}
+
+.navbar .navbar-brand {
+    color: #FFF !important;
+}
+
+.navbar-nav .active a {
+    color: #FF4B2B !important;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #FFF;
+}
+
+.dropdown-menu {
+    background: #22221E;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #FFF;
+    transition: all 0.2s;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background: #FF4B2B;
+    color: #FFF;
+}
+
+.navbar-toggler-icon {
+    color: #FFF !important;
+}
+
+.navbar-dark .navbar-toggler {
+    border-color: #FFFFFF !important;
+}
+
+#searchButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10000; /* Ensure it's above the overlay */
+    cursor: pointer;
+}
+
+/* Container3 styles for search results */
+
+.container3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust as needed */
+}
+
+.item-info {
+    width: 100%; /* Adjust as needed to leave some space between items */
+    margin-bottom: 20px; /* Adjust as needed */
+    font-size: 1.5em;
+}
+
+.item-image {
+    width: 50px; /* Make the image fill its container */
+    height: auto;
+    border-radius: 5em 0 0 5em;
+    margin-right: 1em;
+}
+
+/* Body styles */
+
+body {
+    position: relative;
+}
+
+/* Overlay styles for search results */
+
+.overlay {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
+    z-index: 9999; /* Adjust the z-index to be above other content */
+    color: white;
+}
+
+/* Link styles */
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline darkcyan;
+    color: white;
+}
+
+@media screen and (max-width: 786px) {
+    .overlay {
+        position: fixed;
+        top: 244px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
+        z-index: 9999; /* Adjust the z-index to be above other content */
+        color: white;
+    }
+}
+@media screen and (max-width: 992px) and (min-width: 786px) {
+    .overlay {
+        position: fixed;
+        top: 280px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
+        z-index: 9999; /* Adjust the z-index to be above other content */
+        color: white;
+    }
+}
